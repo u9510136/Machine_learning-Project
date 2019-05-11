@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Console Game Sales</title>
+</head>
+
+<body>
+    <div clas="container">
+        <div class="jumbotron">
+            <h1 align="center">Let's search for game sales!!</h1>
+
+            <form class="example" action="/scrape" methods="GET">
+                <input type="text" placeholder="Search.." name="q">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+
+            <form class="example" action="https://www.google.com/search?source=hp&ei=5wDXXNjHGsni0gKhlo6oDQ&">
+                <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." name="q">
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-search fa-sm"></i>
+                </button>
+            </form>
+        </div>
+
+        <h3>{{google.Result_1}}</h3>
+        <p>{{google.Content_1}}</p>
+        <h3>{{google.Result_2}}</h3>
+        <p>{{google.Content_2}}</p>
+        <h3>{{google.Result_3}}</h3>
+        <p>{{google.Content_3}}</p>
+    </div>
+</body>
+
+</html>
