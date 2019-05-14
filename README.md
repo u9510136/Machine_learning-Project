@@ -1,4 +1,5 @@
 # Machine_learning-Project
 UoA Boot Camp 18-19 Final Project
 
-Remember to change the path of chromedriver for your computer
+Please put your chromedriver.exe into C:\users
+or change the path in scrape_google.py to fit your computer
