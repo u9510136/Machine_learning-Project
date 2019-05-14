@@ -6,7 +6,7 @@ import time
 
 
 def init_browser():
-     ## Remember to change this path for your computer!!
+     # Remember to change this path for your computer!!
     execute_path = {
         "executable_path": "C:/Users/Sam Lin/Desktop/UoA_BC/chromedriver"}
     return Browser('chrome', **execute_path, headless=False)
@@ -25,20 +25,33 @@ def scrape(ui_formatted):
 
     title = soup.find_all("h3", class_="LC20lb")[0].text
     content = soup.find_all("span", class_="st")[0].text
+    link_div = soup.find_all("div", class_="r")[0]
+    link = link_div.find("a", href=True).get("href")
     google_data["Result_1"] = title
     google_data["Content_1"] = content
+    google_data["Link_1"] = link
 
     title = soup.find_all("h3", class_="LC20lb")[1].text
     content = soup.find_all("span", class_="st")[1].text
+    link_div = soup.find_all("div", class_="r")[1]
+    link = link_div.find("a", href=True).get("href")
     google_data["Result_2"] = title
     google_data["Content_2"] = content
+    google_data["Link_2"] = link
 
     title = soup.find_all("h3", class_="LC20lb")[2].text
     content = soup.find_all("span", class_="st")[2].text
+    link_div = soup.find_all("div", class_="r")[2]
+    link = link_div.find("a", href=True).get("href")
     google_data["Result_3"] = title
     google_data["Content_3"] = content
+    google_data["Link_3"] = link
 
-    """ mars_data = {}
+    browser.quit()
+    return google_data
+
+
+""" mars_data = {}
 
      url = "https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest"
      browser.visit(url)
@@ -101,6 +114,3 @@ def scrape(ui_formatted):
           {"title": "Syrtis Major Hemisphere", "img_url": "http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif/full.jpg"},
      ]
      mars_data["Hemisphere"] = hemisphere_image_urls """
-
-    """ browser.quit() """
-    return google_data

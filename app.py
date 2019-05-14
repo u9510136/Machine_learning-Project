@@ -2,7 +2,6 @@ import sys
 from flask import Flask, render_template, jsonify, redirect, request
 from flask_pymongo import PyMongo
 import pymongo
-import scrape_mars
 import scrape_google
 
 app = Flask(__name__)
@@ -26,6 +25,7 @@ def scrape():
     google = mongo.db.google_search
     google_data = scrape_google.scrape(ui_formatted)
     google.update({}, google_data, upsert=True)
+    return redirect("/")
 
 
 if __name__ == "__main__":
