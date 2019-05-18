@@ -9,6 +9,7 @@
   <meta name="author" content="">
 
   <title>Scrolling Nav - Start Bootstrap Template</title>
+  <link rel="stylesheet" href="../static/css/style2.css">
 
   <!-- Bootstrap core CSS -->
   <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -62,7 +63,6 @@
     <div class="container text-center">
       <h1>Welcome</h1>
       <p class="lead">Using targeted search to determine gaming trends</p>
-
     </div>
   </header>
 
@@ -71,6 +71,43 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Search Elements</h2>
+          <div>
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search game name">
+        </div>
+        <div>
+            <input type="text" id="myInput2" onkeyup="myFunction2()" placeholder="Search by platform">
+        </div>
+        <div>
+          <input type="text" id="myInput3" onkeyup="myFunction3()" placeholder="Search by genre">
+        </div>
+        <button class="collapsible">Click to Open Search Results</button>
+      <div class="content">
+          <div class="container">
+              <div class="row margin-top-50">
+                <div class="col-md-2">
+                </div>
+                <div class="col-md-10">
+                  <div id="table-area" class="">  
+                      <table id="myTable">
+                        <tr class="header">
+                          <thead>
+                          <th style="width:60%;">RANK</th>
+                          <th style="width:40%;">NAME</th>
+                          <th style="width:60%;">PLATFORM</th>
+                          <th style="width:40%;">YEAR</th>
+                          <th style="width:60%;">GENRE</th>
+                          <th style="width:40%;">PUBLISHER</th>
+                          </thead>
+                        </tr> 
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+      </div>
+  
+      </div>
 
         </div>
       </div>
@@ -136,7 +173,10 @@
 
   <!-- Custom JavaScript for this theme -->
   <script src="../static/js/scrolling-nav.js"></script>
+  <script src="../static/js/data.js"></script>
+<script src="../static/js/app.js"></script>
 
 </body>
+
 
 </html>
