@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Scrolling Nav - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+  <style>  .btn-search {
+      background: #424242;
+      border-radius: 0;
+      color: #fff;
+      border-width: 1px;
+      border-style: solid;
+      border-color: #1c1c1c;
+    }
+    .btn-search:link, .btn-search:visited {
+      color: #fff;
+    }
+    .btn-search:active, .btn-search:hover {
+      background: #1c1c1c;
+      color: #fff;
+    }
+  </style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Gaming Market</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Search Elements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Target Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Analysis of data</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Welcome</h1>
+      <p class="lead">Using targeted search to determine gaming trends</p>
+
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Search Elements</h2>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Target Search</h2>
+          <div clas="container">
+              <div class="jumbotron">
+                 <form class="example" action="/scrape" methods="GET">
+                      <input type="text" placeholder="Search.." name="q" class="form-control">
+                      <button type="submit" class="btn btn-search"><i class="fa fa-search">Search</i></button>
+                  </form>
+              </div>
+      
+              <a href="{{google.Link_1}}">
+                  <h3>{{google.Result_1}}</h3>
+              </a>
+              <a href="{{google.Link_2}}">
+                  <h3>{{google.Result_2}}</h3>
+              </a>
+              <a href="{{google.Link_3}}">
+                  <h3>{{google.Result_3}}</h3>
+              </a>
+              <a href="{{google.Link_4}}">
+                  <h3>{{google.Result_4}}</h3>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <h2>Analysis</h2>
+          <p class="lead">input recap</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Created by Team Sam-Which</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
