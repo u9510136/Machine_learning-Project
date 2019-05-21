@@ -32,7 +32,7 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
+  coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
     if (content.style.display === "block") {
@@ -45,27 +45,34 @@ for (i = 0; i < coll.length; i++) {
 
 function myFunction() {
   // Declare variables 
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("myInput");
-  filter = input.value.toUpperCase();
+  var input, filter, table, tr, td, i, txtValue, txtValue_2, txtValue_3;
+  input = document.getElementById("myInput").value.toUpperCase();
+  var input_2 = document.getElementById("myInput2").value.toUpperCase();
+  var input_3 = document.getElementById("myInput3").value.toUpperCase();
   table = document.getElementById("myTable");
   tr = table.getElementsByTagName("tr");
 
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[1];
-    if (td) {
+    td_2 = tr[i].getElementsByTagName("td")[2];
+    td_3 = tr[i].getElementsByTagName("td")[4];
+    if (td || td_2 || td_3) {
       txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      txtValue_2 = td_2.textContent || td_2.innerText;
+      txtValue_3 = td_3.textContent || td_3.innerText;
+      if ( (txtValue.toUpperCase().indexOf(input) > -1 || input == "")
+      && ( txtValue_2.toUpperCase().indexOf(input_2) > -1 || input_2 == "")
+      && ( txtValue_3.toUpperCase().indexOf(input_3) > -1 || input_3 == "") ) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
       }
-    } 
+    }
   }
 }
 
-function myFunction2() {
+/* function myFunction2() {
   // Declare variables 
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput2");
@@ -78,16 +85,16 @@ function myFunction2() {
     td = tr[i].getElementsByTagName("td")[2];
     if (td) {
       txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      if (txtValue.toUpperCase() == filter) {
         tr[i].style.display = "";
       } else {
         tr[i].style.display = "none";
       }
-    } 
+    }
   }
-}
+} */
 
-function myFunction3() {
+/* function myFunction3() {
   // Declare variables 
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput3");
@@ -105,6 +112,6 @@ function myFunction3() {
       } else {
         tr[i].style.display = "none";
       }
-    } 
+    }
   }
-}
+} */
