@@ -190,19 +190,98 @@
       </div>
     </div>
   </section>
- 
+
   <section id="contact">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <h2>Analysis</h2>
-          <p class="lead"><div class='tableauPlaceholder' id='viz1558411681849' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;Forecast_15583269681660&#47;DeepDiveAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Forecast_15583269681660&#47;DeepDiveAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;Forecast_15583269681660&#47;DeepDiveAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1558411681849');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></p>
-          <p class="lead"></p>
-          <p class="lead"></p>
-          <p class="lead"></p>
-          <p class="lead"></p>
-          <p class="lead"></p>
-          
+        <h2>Basic Analysis</h2>
+          <body>Using our data set and machine learning can we find a good predictor for global video game sales?</body>
+                   <br>
+                   <br/> 
+                    <div class="container">
+                        <div class="row">
+                            <h1>Can critic's scores be used a good predictor of global sales?</h1>
+                            <img src="/static/images/CriticScore.png" height="500" width="1000">
+                            <body><b>R2 Value of 6% - Critic Scores are not a good indicator of Global Sales</b></body>
+                        <br>
+                        <br/>
+                        </div>
+                        <div class="row">
+                            <h2>Can regional scores help predict global sales? Asia</h2>
+                            <img src="/static/images/Asian.png" height="500" width="1000">
+                            <body><b>R2 Value of 45% - Asian scores are not a strong indicator of Global Sales</b></body>
+                        <br>
+                        <br/>
+                        </div>
+                        <div class="row">
+                            <h3>Can regional scores help predict global sales? Europe</h3>
+                            <img src="/static/images/EU.png" height="500" width="1000">
+                            <body><b>R2 Value of 85% - European scores are a good indicator of Global Sales</b></body>
+                        <br>
+                        <br/>
+                        </div>
+                        <div class="row">
+                            <h4>Can regional scores help predict global sales? North America</h4>
+                            <img src="/static/images/NA.png" height="500" width="1000">
+                            <br>
+                            <br/> 
+                            <body><b> R2 Value of 88% - North American scores are the strongest indicator for Global Sales</b></body>
+                        <br>
+                        <br/>
+                        </div>
+                        <div class="row">
+                            <h5><u>Basic Machine Learning Conclusion:</u> Using our video games sales data critic scores can not help us predict global sales but regional sales can. Using European Sales data our machine learning program can predict global sales with a 85% confidence level and using North American 88% confidence level. </h5>
+                        </div>
+                        <p>
+                          <p>
+
+                          </p>
+                            <form id="fishWeight" action="">
+                                <fieldset>
+                                  <legend>Global Sales Calculator</legend>
+                                  <p>
+                        </p>
+                        <body>   
+                          </script>   
+      
+      
+                            <label for="length">Expected Year of Video Game Launch</label>
+                            <input id="length" name="length" type="number" />
+                          </p>
+                          <p>
+                              <input type="submit" value="Calculate Sales" />
+                              or
+                              <input type="reset" value="Reset" />
+                            </p>
+                          </p>
+                            <label for="weight">Projected Global Sales ($mil)</label>
+                            <input id="weight" name="weight" type="number" />
+                          </p>
+                        </fieldset>
+                        </form>
+                        
+                        <script>
+                        (function () {
+                          function calculateFishWeight(length) {
+                            length = parseFloat(length);
+                            test = ((length*0.00840812) - 15.2237)
+                            return (test)
+                          }
+                        
+                          var fishWeight = document.getElementById("fishWeight");
+                          if (fishWeight) {
+                            fishWeight.onsubmit = function () {
+                              this.weight.value = calculateFishWeight(this.length.value);
+                              return false;
+                            };
+                          }
+                        }());
+                        </script>
+                        </body>
+
+                <p class="lead"><div class='tableauPlaceholder' id='viz1558411681849' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;Forecast_15583269681660&#47;DeepDiveAnalysis&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Forecast_15583269681660&#47;DeepDiveAnalysis' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fo&#47;Forecast_15583269681660&#47;DeepDiveAnalysis&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1558411681849');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1016px';vizElement.style.height='991px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></p>
+
         </div>
       </div>
     </div>
